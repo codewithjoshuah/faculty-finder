@@ -1,26 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CampusSync - Faculty Finder</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CampusSync</title>
 
   <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-  <div class="container">
+  <div class="app-container">
 
-    <h1>CampusSync</h1>
-    <p class="subtitle">Faculty Cabin Finder</p>
+    <div class="top-section">
 
-    <input 
-      type="text" 
-      id="searchInput" 
-      placeholder="Search faculty, department, or subject..."
-    >
+      <div class="profile-row">
 
-    <div id="facultyContainer"></div>
+        <div class="profile-circle"></div>
+
+        <div class="notification-icon">
+          🔔
+        </div>
+
+      </div>
+
+      <h1>CampusSync</h1>
+
+      <p class="subtitle">
+        Faculty Cabin Finder
+      </p>
+
+      <input 
+        type="text"
+        id="searchInput"
+        placeholder="Search faculty, department or subject..."
+      >
+
+    </div>
+
+    <div class="bottom-section">
+
+      <div class="results-header">
+
+        <h2>Faculty Directory</h2>
+
+        <span id="resultCount"></span>
+
+      </div>
+
+      <div id="facultyContainer"></div>
+
+    </div>
+
+    <div class="bottom-nav">
+
+      <div class="nav-item active">🏠</div>
+
+      <div class="nav-item">👨‍🏫</div>
+
+      <div class="nav-center">🔍</div>
+
+      <div class="nav-item">📅</div>
+
+      <div class="nav-item">👤</div>
+
+    </div>
 
   </div>
 

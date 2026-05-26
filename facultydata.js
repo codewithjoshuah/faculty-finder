@@ -1,4 +1,5 @@
 const facultyData = [
+
   {
     name: "Dr. Aisha R. Kapoor",
     department: "Computer Science & Engineering",
@@ -33,4 +34,5 @@ const facultyData = [
     subject: "Machine Learning",
     cabin: "AI Lab, Room 502"
   }
+
 ];
