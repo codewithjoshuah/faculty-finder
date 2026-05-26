@@ -1,7 +1,5 @@
 const facultyContainer = document.getElementById("facultyContainer");
-
 const searchInput = document.getElementById("searchInput");
-
 const resultCount = document.getElementById("resultCount");
 
 function displayFaculty(data) {
@@ -21,14 +19,13 @@ function displayFaculty(data) {
     return;
   }
 
-  data.forEach(faculty => {
+  data.forEach((faculty) => {
 
     const card = document.createElement("div");
 
     card.classList.add("faculty-card");
 
     card.innerHTML = `
-
       <div class="faculty-top">
 
         <div class="faculty-avatar">
@@ -36,13 +33,11 @@ function displayFaculty(data) {
         </div>
 
         <div>
-
           <h2>${faculty.name}</h2>
 
           <p class="department-text">
             🏢 ${faculty.department}
           </p>
-
         </div>
 
       </div>
@@ -50,7 +45,6 @@ function displayFaculty(data) {
       <p>📘 ${faculty.subject}</p>
 
       <p>📍 ${faculty.cabin}</p>
-
     `;
 
     facultyContainer.appendChild(card);
@@ -65,16 +59,12 @@ searchInput.addEventListener("input", () => {
 
   const searchValue = searchInput.value.toLowerCase();
 
-  const filteredFaculty = facultyData.filter(faculty => {
+  const filteredFaculty = facultyData.filter((faculty) => {
 
     return (
-
       faculty.name.toLowerCase().includes(searchValue) ||
-
       faculty.department.toLowerCase().includes(searchValue) ||
-
       faculty.subject.toLowerCase().includes(searchValue)
-
     );
 
   });
