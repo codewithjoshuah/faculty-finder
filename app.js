@@ -26,6 +26,7 @@ function displayFaculty(data) {
     card.classList.add("faculty-card");
 
     card.innerHTML = `
+
       <div class="faculty-top">
 
         <div class="faculty-avatar">
@@ -33,11 +34,13 @@ function displayFaculty(data) {
         </div>
 
         <div>
+
           <h2>${faculty.name}</h2>
 
           <p class="department-text">
             🏢 ${faculty.department}
           </p>
+
         </div>
 
       </div>
@@ -45,11 +48,110 @@ function displayFaculty(data) {
       <p>📘 ${faculty.subject}</p>
 
       <p>📍 ${faculty.cabin}</p>
+
+      <p>${faculty.status}</p>
+
     `;
+
+    card.addEventListener("click", () => {
+      openModal(faculty);
+    });
 
     facultyContainer.appendChild(card);
 
   });
+
+}
+
+function openModal(faculty) {
+
+  const oldModal = document.querySelector(".modal-overlay");
+
+  if (oldModal) {
+    oldModal.remove();
+  }
+
+  const modal = document.createElement("div");
+
+  modal.classList.add("modal-overlay");
+
+  let timetableHTML = "";
+
+  for (const day in faculty.timetable) {
+
+    timetableHTML += `
+
+      <div class="day-block">
+
+        <h3>
+          ${day.charAt(0).toUpperCase() + day.slice(1)}
+        </h3>
+
+        ${faculty.timetable[day]
+          .map(item => `<p>${item}</p>`)
+          .join("")}
+
+      </div>
+
+    `;
+  }
+
+  modal.innerHTML = `
+
+    <div class="modal-content">
+
+      <button class="close-btn">✖</button>
+
+      <div class="modal-header">
+
+        <div class="faculty-avatar large-avatar">
+          ${faculty.name.charAt(0)}
+        </div>
+
+        <div>
+
+          <h2>${faculty.name}</h2>
+
+          <p>${faculty.department}</p>
+
+        </div>
+
+      </div>
+
+      <div class="modal-info">
+
+        <p>📘 ${faculty.subject}</p>
+
+        <p>📍 ${faculty.cabin}</p>
+
+        <p>📞 ${faculty.phone}</p>
+
+        <p>✉️ ${faculty.email}</p>
+
+        <p>${faculty.status}</p>
+
+      </div>
+
+      <h2 class="timetable-title">
+        Weekly Timetable
+      </h2>
+
+      <div class="timetable-container">
+
+        ${timetableHTML}
+
+      </div>
+
+    </div>
+
+  `;
+
+  document.body.appendChild(modal);
+
+  modal.querySelector(".close-btn")
+    .addEventListener("click", () => {
+      modal.remove();
+    });
 
 }
 
