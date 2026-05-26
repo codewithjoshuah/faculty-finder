@@ -11,28 +11,28 @@ const facultyData = [
     name: "Prof. Rahul Mehta",
     department: "Information Technology",
     subject: "Database Management Systems",
-    cabin: "IT Block, Room 204"
+    cabin: "S Block, Room 204"
   },
 
   {
     name: "Dr. Sneha Iyer",
     department: "Electronics & Communication",
     subject: "Digital Electronics",
-    cabin: "E-Block, Room 118"
+    cabin: "N-Block, Room 118"
   },
 
   {
     name: "Prof. Arjun Verma",
     department: "Mechanical Engineering",
     subject: "Thermodynamics",
-    cabin: "M-Block, Room 410"
+    cabin: "S-Block, Room 610"
   },
 
   {
     name: "Dr. Neha Sharma",
     department: "Artificial Intelligence",
     subject: "Machine Learning",
-    cabin: "AI Lab, Room 502"
+    cabin: "S, Room 602"
   }
 
 ];
