@@ -51,6 +51,10 @@ function displayFaculty(data) {
 
       <p>${faculty.status}</p>
 
+      <button class="view-more-btn">
+  View More
+</button>
+
     `;
 
     card.addEventListener("click", () => {

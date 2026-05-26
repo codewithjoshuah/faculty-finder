@@ -374,3 +374,24 @@ h1 {
   margin: 8px 0;
   color: #475569;
 }
+.view-more-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #6d28d9, #9333ea);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.view-more-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(109,40,217,0.25);
+}
+
+.view-more-btn:active {
+  transform: scale(0.97);
+}
